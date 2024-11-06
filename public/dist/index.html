@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Cocina de la YaIA</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Enlace al archivo CSS -->
+  <script type="module" crossorigin src="/assets/index-q3fc8oc1.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DbDgnjc9.css">
+</head>
+
+<body>
+    <!-- Header con Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="/assets/logoYAIA-CUZ8emCb.png" alt="Logo" class="logo">
+
+            </div>
+            <ul class="navbar-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#recipes">Recetas</a></li>
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <!-- Botón para abrir el menú lateral (móvil) -->
+            <button id="openNavButton" class="navbar-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Menú lateral -->
+    <div id="sidebar">
+        <a href="javascript:void(0)" id="closeNavButton">×</a>
+        <h2>Selecciones</h2>
+        <br>
+        <h3>Comida:</h3>
+        <form id="applianceFilterForm">
+            <label class="container">
+                <input type="checkbox" name="appliance" value="vegana">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Vegana
+            </label>
+
+            <label class="container">
+                <input type="checkbox" name="appliance" value="flexitariana">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Flexitariana
+            </label>
+
+            <label class="container">
+                <input type="checkbox" name="appliance" value="paleo">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Paleo
+            </label>
+
+            <label class="container">
+                <input type="checkbox" name="appliance" value="satvica">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Dieta Sátvica
+            </label>
+
+            <label class="container">
+                <input type="checkbox" name="appliance" value="macrobiotica">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Dieta Macrobiótica
+            </label>
+
+        </form>
+        <br>
+        <h3>Electrodomésticos disponibles:</h3>
+        <form id="applianceFilterForm">
+            <label class="container">
+                <input type="checkbox" name="appliance" value="vitro">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Vitro
+            </label>
+            <label class="container">
+                <input type="checkbox" name="appliance" value="microondas">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Microondas
+            </label>
+            <label class="container">
+                <input type="checkbox" name="appliance" value="horno">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Horno
+            </label>
+            <label class="container">
+                <input type="checkbox" name="appliance" value="freidora">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Freidora
+            </label>
+            <label class="container">
+                <input type="checkbox" name="appliance" value="Thermomix">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Thermomix
+            </label>
+        </form>
+
+        <br>
+
+        <h3>Estilos de comida:</h3>
+
+        <form id="applianceFilterFoodForm">
+            <label class="container">
+                <input type="checkbox" name="appliance" value="Española">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Española
+            </label>
+            <label class="container">
+                <input type="checkbox" name="appliance" value="Italiana">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Italiana
+            </label>
+            <label class="container">
+                <input type="checkbox" name="appliance" value="Japonesa">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Japonesa
+            </label>
+            <label class="container">
+                <input type="checkbox" name="appliance" value="Mexicana">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Mexicana
+            </label>
+            <label class="container">
+                <input type="checkbox" name="appliance" value="Americana">
+                <svg viewBox="0 0 64 64" height="20px" width="20px" class="checkbox-icon">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path"></path>
+                </svg>
+                Americana
+            </label>
+        </form>
+
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="mainContent">
+        <div id="titulo">
+            <h1>Bienvenido a <br> La cocina de la YaIA</h1>
+        </div>
+
+        <div class="image-container">
+            <!-- Contenedor para la vista previa de la imagen seleccionada -->
+            <img id="imagePreview" src="" alt="Vista previa de la imagen">
+        </div>
+
+
+        <!-- Botón para seleccionar una imagen desde el almacenamiento -->
+        <input type="file" id="imageInput" accept="image/*" style="display: none;" />
+        <button id="uploadButton">Seleccionar Imagen</button>
+
+        <!-- Botón para tomar una foto desde la cámara -->
+        <button id="cameraButton">Tomar Foto</button>
+
+
+        <!-- Botón para enviar la imagen al servidor -->
+        <button id="sendButton" disabled>Crear Receta</button>
+
+        <!-- Contenedor del spinner -->
+        <!-- El spinner del hámster -->
+        <div id="spinner-container">
+            <div id="spinner" style="display: none;">
+                <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+                    <div class="wheel"></div>
+                    <div class="hamster">
+                        <div class="hamster__body">
+                            <div class="hamster__head">
+                                <div class="hamster__ear"></div>
+                                <div class="hamster__eye"></div>
+                                <div class="hamster__nose"></div>
+                            </div>
+                            <div class="hamster__limb hamster__limb--fr"></div>
+                            <div class="hamster__limb hamster__limb--fl"></div>
+                            <div class="hamster__limb hamster__limb--br"></div>
+                            <div class="hamster__limb hamster__limb--bl"></div>
+                            <div class="hamster__tail"></div>
+                        </div>
+                    </div>
+                    <div class="spoke"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Si tienes un spinner original, debe tener un ID distinto, por ejemplo, "existingSpinner" -->
+        <div id="existingSpinner" style="display: none;">
+            <!-- Aquí va tu spinner original, si lo tienes -->
+        </div>
+
+
+
+        <section>
+            <div id="result">
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 La cocina de la YaIA. Todos los derechos reservados.</p>
+            <p><a href="#contact">Contacto</a> | <a href="#about">Sobre Nosotros</a> | <a href="#privacy">Política de
+                    Privacidad</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

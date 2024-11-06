@@ -1,0 +1,29 @@
+<!-- public/resultado.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la receta</title>
+</head>
+<body>
+    <h1>Resultado de la receta</h1>
+    <div id="receta-container">
+        <!-- Aquí se mostrará el contenido generado de la receta -->
+    </div>
+    <a href="/">Volver al inicio</a>
+
+    <script>
+        // Obtener los parámetros de la URL (si existe algún resultado)
+        const urlParams = new URLSearchParams(window.location.search);
+        const receta = urlParams.get('receta');
+
+        // Mostrar la receta en el contenedor
+        if (receta) {
+            document.getElementById('receta-container').innerHTML = receta;
+        } else {
+            document.getElementById('receta-container').innerHTML = 'No se encontró receta.';
+        }
+    </script>
+</body>
+</html>
